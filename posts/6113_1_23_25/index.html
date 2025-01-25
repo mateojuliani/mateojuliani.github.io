@@ -19,19 +19,19 @@
 
     
     <title>Notes on OSWorld and SWE-Agent</title>
-    <meta name="description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class">
+    <meta name="description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: Agentic Systems Made Real class">
     <meta name="keywords" content='blog, papers'>
 
     <meta property="og:url" content="https://mateojuliani.github.io/posts/6113_1_23_25/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Notes on OSWorld and SWE-Agent">
-    <meta property="og:description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class">
+    <meta property="og:description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: Agentic Systems Made Real class">
     <meta property="og:image" content="https://mateojuliani.github.io/images/image.png">
     <meta property="og:image:secure_url" content="https://mateojuliani.github.io/images/image.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Notes on OSWorld and SWE-Agent">
-    <meta name="twitter:description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class">
+    <meta name="twitter:description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: Agentic Systems Made Real class">
     <meta property="twitter:domain" content="https://mateojuliani.github.io/posts/6113_1_23_25/">
     <meta property="twitter:url" content="https://mateojuliani.github.io/posts/6113_1_23_25/">
     <meta name="twitter:image" content="https://mateojuliani.github.io/images/image.png">
@@ -164,7 +164,7 @@
 	
 
 	
-          <small role="doc-subtitle">My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class</small>
+          <small role="doc-subtitle">My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: Agentic Systems Made Real class</small>
 	
 
 	
@@ -192,7 +192,7 @@
 <li><a href="https://arxiv.org/abs/2405.15793">SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</a></li>
 <li><a href="https://arxiv.org/abs/2404.07972">OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments</a></li>
 </ul>
-<p>This week in my AI Agents Made Real Class, we read two papers, <a href="https://arxiv.org/abs/2405.15793">SWE-agent</a> and <a href="https://arxiv.org/abs/2404.07972">OSWorld</a>. Overall, I thought both papers provided a good overview of the efficacy of agents with certain tasks and the challenges researchers face to create them. The field is moving quickly (OpenAI released <a href="https://openai.com/index/computer-using-agent/">Operator</a> that achieved 38.1% success rate on OSWorld vs 12.2% in the original paper) so some of the observations might be slightly outdated now, but adding them below.</p>
+<p>This week for my Agentic Systems Made Real class, we read two papers, <a href="https://arxiv.org/abs/2405.15793">SWE-agent</a> and <a href="https://arxiv.org/abs/2404.07972">OSWorld</a>. Overall, I thought both papers provided a good overview of the efficacy of agents with certain tasks and the challenges researchers face to create them. The field is moving quickly (OpenAI released <a href="https://openai.com/index/computer-using-agent/">Operator</a> that achieved 38.1% success rate on OSWorld vs 12.2% in the original paper) so some of the observations might be slightly outdated now, but adding them below.</p>
 <p>First, I was a bit surprised with the contrast between the OSWorld paper’s views on ACI vs SWE-agent’s. In the OSWorld paper, they mention that they believe the “VLM agents using screenshots only…should be the ultimate configuration in the long run”. This gave me the impression that the researchers were trying to create an agent that mimics human performance, not necessarily one that optimizes performance (in particular since the a11y tree configuration performed the best). That view contrasted the main philosophy behind the SWE-agent paper - that agents might perform better with different interfaces. This philosophy is likely to lead to more effective agents as it does not try to limit agents to how we perceive the world (and in particular since &ldquo;they&rdquo; definitely perceive the world differently). However, I do realize having an agent that uses a GUI could help with explainability and being able to observe what the agent is doing. During class discussion, another interesting point brought up is that creating an unique ACI for each problem or task might not be as scalable. Both these points suggest there likely will need to be a balance between the two philosophies. Interestingly (and contrary to my initial expectation), OpenAI&rsquo;s Operator just uses screenshots and text commands (similar to OSWorld&rsquo;s initial observation) to achieve the 38.1% success rate.</p>
 <p>Second, I was left impressed by the OSWorld paper’s commentary on the number of man hours (1800 hours over 3 months) needed to create the 369 problems included in its benchmark. Third, I found it interesting that both papers used pre-trained models for their separate tasks, with the larger / costlier / more advanced versions of GPT / Claude outperforming the smaller models. Even still, the performance tends to be low, with the OSWorld paper commenting that the models are being used in environments they weren’t trained for. The latter observation is likely a consequence of the former, in that creating these benchmarks is a bottleneck to fine-tune / train agents to perform better and be more cost effective. I did come across <a href="https://arxiv.org/abs/2412.15606">this paper</a> which detailed its data synthesis process for creating a VLM agent (creating synthetic data and then manually verifying examples), suggesting there may be more efficient ways to generate benchmark data going forward. Similarly, another potential bottleneck is how to create accurate and scalable evaluation functions. Taking it a step further, for training purposes, it also might be helpful to have evaluation functions that can evaluate (and thus reward the agent) mid-task, allowing the agent to figure out the optimal steps to complete the task.</p>
 <p>On the topic of training / fine-tuning an agent, while training an agent will likely improve performance, it can also increase the risk of the agent not being able to generalize. For example, Google created the <a href="https://neurips.cc/virtual/2023/poster/73496">Android in the Wild dataset</a>. With its dataset, Google trained its own agent. Below I have included chart showing Google&rsquo;s two agent&rsquo;s performance (BC-single/BC-history) compared to prompting a PaLM model (LLM-0 / LLM-hist-5-CoT).</p>

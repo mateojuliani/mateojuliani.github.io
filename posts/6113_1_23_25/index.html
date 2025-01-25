@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 17.5px;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>Notes on OSWorld and SWE-Agent</title>
+    <meta name="description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class">
+    <meta name="keywords" content='blog, papers'>
+
+    <meta property="og:url" content="https://mateojuliani.github.io/posts/6113_1_23_25/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Notes on OSWorld and SWE-Agent">
+    <meta property="og:description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class">
+    <meta property="og:image" content="https://mateojuliani.github.io/images/image.png">
+    <meta property="og:image:secure_url" content="https://mateojuliani.github.io/images/image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Notes on OSWorld and SWE-Agent">
+    <meta name="twitter:description" content="My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class">
+    <meta property="twitter:domain" content="https://mateojuliani.github.io/posts/6113_1_23_25/">
+    <meta property="twitter:url" content="https://mateojuliani.github.io/posts/6113_1_23_25/">
+    <meta name="twitter:image" content="https://mateojuliani.github.io/images/image.png">
+
+    
+    <link rel="canonical" href="https://mateojuliani.github.io/posts/6113_1_23_25/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.3eb19cb61dde9e37b9522867f3e024aeb68e26ab8e03252e46e365abcb19acf7.js" integrity="sha256-PrGcth3enje5Uihn8&#43;AkrraOJquOAyUuRuNlq8sZrPc="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="https://mateojuliani.github.io/">
+                <img src='/images/image.png' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="https://mateojuliani.github.io/">Mateo Juliani</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="https://mateojuliani.github.io/about/" aria-label="about" > About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://mateojuliani.github.io/posts/" aria-label="posts" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://mateojuliani.github.io/xg_boosted/" aria-label="xg_boosted" > xG Boosted </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://mateojuliani.github.io/papers/" aria-label="papers" > Papers </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="https://mateojuliani.github.io/reading/" aria-label="Reading" > Reading </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="https://mateojuliani.github.io/about/" > About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://mateojuliani.github.io/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://mateojuliani.github.io/xg_boosted/" > xG Boosted </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://mateojuliani.github.io/papers/" > Papers </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="https://mateojuliani.github.io/reading/" > Reading </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>Notes on OSWorld and SWE-Agent</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">My observations on papers read the week of Jan 19 2025 for Columbia&#39;s 6113: AI Agents Made Real class</small>
+	
+
+	
+          <p class="post-date">January 25, 2025
+           
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="https://mateojuliani.github.io/tags/blog">blog</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="https://mateojuliani.github.io/tags/papers">papers</a></li>
+           
+         
+        </ul>
+    </div>
+
+    <div class="post-content">
+        <p><!-- raw HTML omitted -->Papers Read<!-- raw HTML omitted --></p>
+<ul>
+<li><a href="https://arxiv.org/abs/2405.15793">SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</a></li>
+<li><a href="https://arxiv.org/abs/2404.07972">OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments</a></li>
+</ul>
+<p>This week in my AI Agents Made Real Class, we read two papers, <a href="https://arxiv.org/abs/2405.15793">SWE-agent</a> and <a href="https://arxiv.org/abs/2404.07972">OSWorld</a>. Overall, I thought both papers provided a good overview of the efficacy of agents with certain tasks and the challenges researchers face to create them. The field is moving quickly (OpenAI released <a href="https://openai.com/index/computer-using-agent/">Operator</a> that achieved 38.1% success rate on OSWorld vs 12.2% in the original paper) so some of the observations might be slightly outdated now, but adding them below.</p>
+<p>First, I was a bit surprised with the contrast between the OSWorld paper’s views on ACI vs SWE-agent’s. In the OSWorld paper, they mention that they believe the “VLM agents using screenshots only…should be the ultimate configuration in the long run”. This gave me the impression that the researchers were trying to create an agent that mimics human performance, not necessarily one that optimizes performance (in particular since the a11y tree configuration performed the best). That view contrasted the main philosophy behind the SWE-agent paper - that agents might perform better with different interfaces. This philosophy is likely to lead to more effective agents as it does not try to limit agents to how we perceive the world (and in particular since &ldquo;they&rdquo; definitely perceive the world differently). However, I do realize having an agent that uses a GUI could help with explainability and being able to observe what the agent is doing. During class discussion, another interesting point brought up is that creating an unique ACI for each problem or task might not be as scalable. Both these points suggest there likely will need to be a balance between the two philosophies. Interestingly (and contrary to my initial expectation), OpenAI&rsquo;s Operator just uses screenshots and text commands (similar to OSWorld&rsquo;s initial observation) to achieve the 38.1% success rate.</p>
+<p>Second, I was left impressed by the OSWorld paper’s commentary on the number of man hours (1800 hours over 3 months) needed to create the 369 problems included in its benchmark. Third, I found it interesting that both papers used pre-trained models for their separate tasks, with the larger / costlier / more advanced versions of GPT / Claude outperforming the smaller models. Even still, the performance tends to be low, with the OSWorld paper commenting that the models are being used in environments they weren’t trained for. The latter observation is likely a consequence of the former, in that creating these benchmarks is a bottleneck to fine-tune / train agents to perform better and be more cost effective. I did come across <a href="https://arxiv.org/abs/2412.15606">this paper</a> which detailed its data synthesis process for creating a VLM agent (creating synthetic data and then manually verifying examples), suggesting there may be more efficient ways to generate benchmark data going forward. Similarly, another potential bottleneck is how to create accurate and scalable evaluation functions. Taking it a step further, for training purposes, it also might be helpful to have evaluation functions that can evaluate (and thus reward the agent) mid-task, allowing the agent to figure out the optimal steps to complete the task.</p>
+<p>On the topic of training / fine-tuning an agent, while training an agent will likely improve performance, it can also increase the risk of the agent not being able to generalize. For example, Google created the <a href="https://neurips.cc/virtual/2023/poster/73496">Android in the Wild dataset</a>. With its dataset, Google trained its own agent. Below I have included chart showing Google&rsquo;s two agent&rsquo;s performance (BC-single/BC-history) compared to prompting a PaLM model (LLM-0 / LLM-hist-5-CoT).</p>
+<p><img alt="fig_1" src="/posts/6113_1_23_25/images/Google_Android_Agent.png"></p>
+<p>Unsurprisingly, the Google&rsquo;s trained agents outperform the base LLM agent in the standard configuration. However, performance deteriorates relatively more for Google trained agents in unseen domains compared to the base LLM agent. The absolute performance is nonetheless higher, but still suggests Google&rsquo;s agent was likely overfit to the Standard setting. The LLM agent powered by PaLM, which is trained on more general text generation, does not suffer as much of a deterioration (and in some cases performs better, although this is likely due to random chance), suggesting training agents on more general tasks (i.e. understand core android UI features and navigation) could help with generalization.</p>
+<p>Finally, I did get the sense that how an agent receives instructions and its history can be consolidated more. This was demonstrated with SWE-agent where it didn’t need the full history of its actions to perform well. With smaller context windows, smaller models might achieve good performances, again making the agent more cost effective and accessible.</p>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        Made with &#10084;&#65039; using <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a>
+    </span>
+</footer>
+</body>
+</html>

@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mateo Juliani</title>
-    <link>https://mateojuliani.github.io/</link>
-    <description>Recent content on Mateo Juliani</description>
+    <title>Papers on Mateo Juliani</title>
+    <link>https://mateojuliani.github.io/tags/papers/</link>
+    <description>Recent content in Papers on Mateo Juliani</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 25 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://mateojuliani.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mateojuliani.github.io/tags/papers/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Notes on OSWorld and SWE-Agent</title>
       <link>https://mateojuliani.github.io/posts/6113_1_23_25/</link>
       <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://mateojuliani.github.io/posts/6113_1_23_25/</guid>
       <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Papers Read&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2405.15793&#34;&gt;SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2404.07972&#34;&gt;OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This week in my AI Agents Made Real Class, we read two papers, &lt;a href=&#34;https://arxiv.org/abs/2405.15793&#34;&gt;SWE-agent&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/abs/2404.07972&#34;&gt;OSWorld&lt;/a&gt;. Overall, I thought both papers provided a good overview of the efficacy of agents with certain tasks and the challenges researchers face to create them. The field is moving quickly (OpenAI released &lt;a href=&#34;https://openai.com/index/computer-using-agent/&#34;&gt;Operator&lt;/a&gt; that achieved 38.1% success rate on OSWorld vs 12.2% in the original paper) so some of the observations might be slightly outdated now, but adding them below.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>How to read a paper</title>
-      <link>https://mateojuliani.github.io/posts/how_to_read_paper/</link>
-      <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mateojuliani.github.io/posts/how_to_read_paper/</guid>
-      <description>&lt;p&gt;This semester at Columbia, I am taking two research focused classes on Causal Inference and AI Agents. Reading academic papers is a main component of both classes. While in the past I have read research papers, I did not have a set system to efficiently read, understand, and annotate the papers. The purpose of this post is to detail my current method for my own reference, to source feedback from others (see about page), and (maybe!) help others read papers more efficiently.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://mateojuliani.github.io/posts/should_i_do_an_ms/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mateojuliani.github.io/posts/should_i_do_an_ms/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

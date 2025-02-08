@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>xG Boosted on Mateo Juliani</title>
-    <link>http://localhost:1313/xg_boosted/</link>
+    <link>https://mateojuliani.github.io/projects/xg_boosted/</link>
     <description>Recent content in xG Boosted on Mateo Juliani</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:1313/xg_boosted/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://mateojuliani.github.io/projects/xg_boosted/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

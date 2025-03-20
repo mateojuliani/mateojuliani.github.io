@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 17.5px;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>A Simple - and Somewhat Effective - Soccer Model</title>
+    <meta name="description" content="A quick guide to building a probabilistic model to predict the outcome of International soccer matches">
+    <meta name="keywords" content='sports analytics'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="A Simple - and Somewhat Effective - Soccer Model">
+    <meta property="og:description" content="A quick guide to building a probabilistic model to predict the outcome of International soccer matches">
+    <meta property="og:image" content="http://localhost:1313/images/image.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="A Simple - and Somewhat Effective - Soccer Model">
+    <meta name="twitter:description" content="A quick guide to building a probabilistic model to predict the outcome of International soccer matches">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
+    <meta name="twitter:image" content="http://localhost:1313/images/image.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.3eb19cb61dde9e37b9522867f3e024aeb68e26ab8e03252e46e365abcb19acf7.js" integrity="sha256-PrGcth3enje5Uihn8&#43;AkrraOJquOAyUuRuNlq8sZrPc="></script>
+
+    
+    
+</head>
+<body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/image.png' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Mateo Juliani</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/about/" aria-label="about" > About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="posts" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/projects/" aria-label="projects" > Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/reading/" aria-label="Reading" > Reading </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/about/" > About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/projects/" > Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/reading/" > Reading </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>A Simple - and Somewhat Effective - Soccer Model</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+    
+
+	
+
+	
+
+	
+          <small role="doc-subtitle">A quick guide to building a probabilistic model to predict the outcome of International soccer matches</small>
+	
+
+	
+          <p class="post-date">March 13, 2025
+           
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/sports-analytics">sports analytics</a></li>
+           
+         
+        </ul>
+    </div>
+
+    
+     
+
+    
+
+    <div class="post-content">
+        <h1 id="section-1-intro-and-motivation">Section 1: Intro and Motivation</h1>
+<p>In November 2023, I came across these betting odds for the World Cup Qualifying match between Brazil and Argentina:</p>
+<p><img alt="bra arg odds" src="/posts/international_soccer_forecasts_3_13_25/images/arg_bra_odds.jpg"></p>
+<p>If you are not familar with decimals odds (or bettings odds in general), the picture shows a sports book offering a 2.3x payout for every 1 dollar bet if Brazil beat Argentina in their upcoming fixture. Similarly, it offered 3.0x for a draw, and 3.4x for an Argentine victory. Converting those odds to probability (in this case it is easy - we can do so by dividing 1 by the odds), we get the following:</p>
+<ul>
+<li>Chance of Brazil winning: ~41.6%</li>
+<li>Chance of the game ending in a tie: ~33.3%</li>
+<li>Chance of Argentina winning: ~29.4%</li>
+</ul>
+<p>Before I delve deeper, a little background on me. I am from Argentina and am a die-hard Argentine Soccer (or football) fan. The 2022 World Cup was a cherished event for me.</p>
+<p>For a bit more background, at the time (November 2023), the Argentine nation team had continued its form from the World Cup, while the Brazilian national team was going through going through some of the worst (if not the worst) form I had ever seen them in.</p>
+<p>Therefore, seeing Brazil as the favorite seemed mispriced. For even <em>more</em> context, the probable reason why Brazil was priced at 2.3x was that they were playing at Home. Previously, Brazil had never lost a World Cup Qualifying match at home. Past performance is not indicative of future performance (although obviously it can be a good indicator), and Argentina went to win the game following an Ottamendi header - making me 3.4x my money in the process.</p>
+<p>More importantly, the (potentially - HOW DO YOU ADD FOOTNOTES IN MARKDOWN) mispriced odds suggested that maybe these sports books weren&rsquo;t that great at pricing International Football matches, which motivates the main question - How could we build a simple model to estimate the win / draw / loss rates of International Football matches?</p>
+<p>The rest of this post will be as follows: Section 2 describes the general methodology behind the odds <a href="/projects/xg_boosted/">published on this website</a>, Section 3 analyzes how effective this methodology is vs. actual results, and Section 4 is a catch all section for my remaining thoughts.</p>
+<h1 id="section-2-model-methodology">Section 2: Model Methodology</h1>
+<p>To start, we need a method to rank a team&rsquo;s overall form. A common methodology is using the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">Elo system</a> to rate teams, although some methodology adjustments are needed vs the base system. To keep things simple, we will use the Elo ratings from <a href="eloratings.net">eloratings.net</a>, which compiles and updates International Soccer Team&rsquo;s Elo ratings. You can read more about the methodology <a href="https://eloratings.net/about">here</a>, but some of the main devations from the base Elo system are:</p>
+<ul>
+<li>Ties are worth half of a win</li>
+<li>The bigger the tournament (e.g. World Cup, Euros, etc), the higher K factor used</li>
+<li>The K factor is also modified for goal difference. The greater goal difference, the higher K value used.</li>
+</ul>
+<p>With the Elo Ratings, a simple feature we can create to predict win rates is the ELO difference between the two teams. I would highly recommend checking out <a href="https://www.youtube.com/watch?v=KjISuZ5o06Q&t=1s">this video</a> by Oxford Mathematics which details how to use Elo difference to construction a model using Elo difference. In this post, we will use a different methodology, but as shown in the graph below, there is a decent relationship (R^2 of ~.40) between ELO difference and score difference.</p>
+<p><img alt="elo diff score diff" src="/posts/international_soccer_forecasts_3_13_25/images/elo_diff_score_diff.png"></p>
+<p>The Elo Difference variable is enough to fit a multinomial logistic regression to forecast win, loss, draw percentages. However, we will add two more features - two dummy variables to indicate if team 1 is home (0 if no, and 1 if yes) and if team 2 is home.</p>
+<p>With these three variables, we can fit a multinomial logisitic regression using Sklearn. As mentioned, the features are</p>
+<ul>
+<li>elo_diff: The difference in Elo between Team 1 and 2</li>
+<li>team_home: Dummy variable indicating if Team 1 is home</li>
+<li>opp_home: Dummy variable indicating if Team 2 is home</li>
+</ul>
+<p>and the target variable is game_results, a category variable indicating if Team 1 won, Team 2 won, or if the game ended in a draw.</p>
+<pre><code>X = df_train[[&quot;elo_diff&quot;, &quot;team_home&quot;, &quot;opp_home&quot;]]
+y = df_train[&quot;game_results&quot;]
+model_ft = LogisticRegression(multi_class='multinomial', solver='lbfgs')
+model_ft.fit(X, y)
+</code></pre>
+<p>Note, when performing inference, we won&rsquo;t actually use the model&rsquo;s to directly who wil win or if the game will end in a draw. Instead, we are interested in the probability of each outcome. In other words, we will not use</p>
+<pre><code>model_ft.predict()
+</code></pre>
+<p>but instead use to get the probabilites of each of the forecasted classes:</p>
+<pre><code>model_ft.predict_proba()
+</code></pre>
+<p>We will then be able to use these probabilties to directly compare to a Sportbook&rsquo;s odds.</p>
+<p>And thats its! Pretty simple, but in the next section will see how well the model performs. If you want to take a closer look at the code, you can find it on my <a href="https://github.com/mateojuliani/international_soccer_forecasts">github</a>.</p>
+<h1 id="second-3-results">Second 3: Results</h1>
+<p>Evaluating the results of soccer games is tricky. To start, we will input ELO differences of -1000 to 1000 into our model to get a sense if the model odds are realistic. We also assume that Team 1 is the home team:</p>
+<p><img alt="win percentages" src="/posts/international_soccer_forecasts_3_13_25/images/win_pct.png"></p>
+<p>At a high level, we can see as Elo difference increases, Team 1 has higher odds of winning, which is what we would expect. Interestingly, team 1 and team 2 have the same odds of winning when Team 1 has an ELO difference of -120 vs Team 2. In other words, the model implies that playing at home is equivalent to getting a 120 ELO boost. To check this, we can plot the same graph but set the home advantage to 0 for both teams.</p>
+<p><img alt="ex_home_adv" src="/posts/international_soccer_forecasts_3_13_25/images/odds_ex_home_adv.png"></p>
+<p>As expected, now the teams have the same odds when they have an Elo difference of 0.</p>
+<p>But how does the model compare to actual results?</p>
+<p>To test that out, we will split into a training set to fit the logistic model and then the testing set to test the model&rsquo;s performance. Our training data will include all matches prior to 2019-10-15 (3603 observations) and our test set will include all games after that date (1501 observations).</p>
+<p>we will evaluate the models performance using the famed <a href="https://library.virginia.edu/data/articles/a-brief-on-brier-scores">Brier score</a>, a metric to measure the performance of probabilistic forecasts.</p>
+<h1 id="second-4-remaining-rambling-thoughts">Second 4: Remaining Rambling Thoughts</h1>
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+<div class="prev-post">
+    <p>
+        <a href="/posts/6113_1_26_25/">
+            &#8592;
+            Previous:
+            The Current State of Agentic Systems Research
+        </a>
+    </p>
+    
+    
+</div>
+
+
+
+
+            
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        Web layout based on <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a> theme.
+    </span>
+</footer>
+</body>
+</html>

@@ -6,22 +6,8 @@
     <description>Recent content in Blog on Mateo Juliani</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 07 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mateojuliani.github.io/tags/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Current State of Agentic Systems Research</title>
-      <link>https://mateojuliani.github.io/posts/6113_1_26_25/</link>
-      <pubDate>Fri, 07 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://mateojuliani.github.io/posts/6113_1_26_25/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Papers Read / Referenced&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.nature.com/articles/nature24270&#34;&gt;Mastering the game of Go without human knowledge&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2410.02052&#34;&gt;ExACT: Teaching AI Agents to Explore with Reflective-MCTS and Exploratory Learning&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2310.06770&#34;&gt;SWE-bench: Can Language Models Resolve Real-World GitHub Issues?&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2405.15793&#34;&gt;SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2310.03714&#34;&gt;DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2404.07972&#34;&gt;OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2402.14207&#34;&gt;Assisting in Writing Wikipedia-like Articles From Scratch with Large Language Models&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Over the last few weeks, I have started reading more papers on AI Agents and Agentic Systems. Below I am including my thoughts on all of the papers and synthesizing my thoughts on the current state of research in the field.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Notes on OSWorld and SWE-Agent</title>
-      <link>https://mateojuliani.github.io/posts/6113_1_23_25/</link>
-      <pubDate>Sat, 25 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://mateojuliani.github.io/posts/6113_1_23_25/</guid>
-      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;Papers Read&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2405.15793&#34;&gt;SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://arxiv.org/abs/2404.07972&#34;&gt;OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;This week for my Agentic Systems Made Real class, we read two papers, &lt;a href=&#34;https://arxiv.org/abs/2405.15793&#34;&gt;SWE-agent&lt;/a&gt; and &lt;a href=&#34;https://arxiv.org/abs/2404.07972&#34;&gt;OSWorld&lt;/a&gt;. Overall, I thought both papers provided a good overview of the efficacy of agents with certain tasks and the challenges researchers face to create them. The field is moving quickly (OpenAI released &lt;a href=&#34;https://openai.com/index/computer-using-agent/&#34;&gt;Operator&lt;/a&gt; that achieved 38.1% success rate on OSWorld vs 12.2% in the original paper) so some of the observations might be slightly outdated now, but adding them below.&lt;/p&gt;</description>
-    </item>
     <item>
       <title>How to Read a Paper</title>
       <link>https://mateojuliani.github.io/posts/how_to_read_paper/</link>

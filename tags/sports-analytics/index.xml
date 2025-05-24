@@ -6,14 +6,14 @@
     <description>Recent content in Sports Analytics on Mateo Juliani</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 13 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/sports-analytics/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>A Simple - and Somewhat Effective - Soccer Model </title>
+      <title>A Simple - and Somewhat Effective - Soccer Model</title>
       <link>http://localhost:1313/posts/international_soccer_forecasts_3_13_25/</link>
-      <pubDate>Thu, 13 Mar 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/international_soccer_forecasts_3_13_25/</guid>
-      <description>&lt;h1 id=&#34;section-1-intro-and-motivation&#34;&gt;Section 1: Intro and Motivation&lt;/h1&gt;&#xA;&lt;p&gt;In November 2023, I came across these betting odds for the World Cup Qualifying match between Brazil and Argentina:&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;bra arg odds&#34; src=&#34;http://localhost:1313/posts/international_soccer_forecasts_3_13_25/images/arg_bra_odds.jpg&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;If you are not familar with decimals odds (or bettings odds in general), the picture shows a sports book offering a 2.3x payout for every 1 dollar bet if Brazil beat Argentina in their upcoming fixture. Similarly, it offered 3.0x for a draw, and 3.4x for an Argentine victory. Converting those odds to probability (in this case it is easy - we can do so by dividing 1 by the odds), we get the following:&lt;/p&gt;</description>
+      <description>&lt;p&gt;Ahead of the next international soccer break in early June 2025, I wanted to publish a quick overview of the methodology I use to create international soccer forecasts on &lt;a href=&#34;http://localhost:1313/projects/xg_boosted/&#34;&gt;this site&lt;/a&gt;. If you have any thoughts on the below, I would love to hear from you at mateojuliani at gmail dot com!&lt;/p&gt;&#xA;&lt;h1 id=&#34;section-1-intro-and-motivation&#34;&gt;Section 1: Intro and Motivation&lt;/h1&gt;&#xA;&lt;p&gt;In November 2023, I came across these betting odds for the World Cup Qualifying match between Brazil and Argentina:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

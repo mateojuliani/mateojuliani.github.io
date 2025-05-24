@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -20,24 +20,24 @@
     
     <title>A Simple - and Somewhat Effective - Soccer Model</title>
     <meta name="description" content="A quick guide to building a probabilistic model to predict the outcome of International soccer matches">
-    <meta name="keywords" content='sports analytics'>
+    <meta name="keywords" content='sports modeling'>
 
-    <meta property="og:url" content="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
+    <meta property="og:url" content="https://mateojuliani.github.io/posts/international_soccer_forecasts_5_24_25/">
     <meta property="og:type" content="website">
     <meta property="og:title" content="A Simple - and Somewhat Effective - Soccer Model">
     <meta property="og:description" content="A quick guide to building a probabilistic model to predict the outcome of International soccer matches">
-    <meta property="og:image" content="http://localhost:1313/images/image.png">
-    <meta property="og:image:secure_url" content="http://localhost:1313/images/image.png">
+    <meta property="og:image" content="https://mateojuliani.github.io/images/image.png">
+    <meta property="og:image:secure_url" content="https://mateojuliani.github.io/images/image.png">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="A Simple - and Somewhat Effective - Soccer Model">
     <meta name="twitter:description" content="A quick guide to building a probabilistic model to predict the outcome of International soccer matches">
-    <meta property="twitter:domain" content="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
-    <meta property="twitter:url" content="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
-    <meta name="twitter:image" content="http://localhost:1313/images/image.png">
+    <meta property="twitter:domain" content="https://mateojuliani.github.io/posts/international_soccer_forecasts_5_24_25/">
+    <meta property="twitter:url" content="https://mateojuliani.github.io/posts/international_soccer_forecasts_5_24_25/">
+    <meta name="twitter:image" content="https://mateojuliani.github.io/images/image.png">
 
     
-    <link rel="canonical" href="http://localhost:1313/posts/international_soccer_forecasts_3_13_25/">
+    <link rel="canonical" href="https://mateojuliani.github.io/posts/international_soccer_forecasts_5_24_25/">
 
     
     <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
@@ -63,32 +63,32 @@
 
         
         <div class="avatar">
-            <a href="http://localhost:1313/">
+            <a href="https://mateojuliani.github.io/">
                 <img src='/images/image.png' alt="avatar">
             </a>
         </div>
         
 
         <div class="nav-title">
-            <a class="nav-brand" href="http://localhost:1313/">Mateo Juliani</a>
+            <a class="nav-brand" href="https://mateojuliani.github.io/">Mateo Juliani</a>
         </div>
 
         <div class="nav-links">
             
             <div class="nav-link">
-                <a href="http://localhost:1313/about/" aria-label="about" > About </a>
+                <a href="https://mateojuliani.github.io/about/" aria-label="about" > About </a>
             </div>
             
             <div class="nav-link">
-                <a href="http://localhost:1313/posts/" aria-label="posts" > Posts </a>
+                <a href="https://mateojuliani.github.io/posts/" aria-label="posts" > Posts </a>
             </div>
             
             <div class="nav-link">
-                <a href="http://localhost:1313/projects/" aria-label="projects" > Projects </a>
+                <a href="https://mateojuliani.github.io/projects/" aria-label="projects" > Projects </a>
             </div>
             
             <div class="nav-link">
-                <a href="http://localhost:1313/reading/" aria-label="Reading" > Reading </a>
+                <a href="https://mateojuliani.github.io/reading/" aria-label="Reading" > Reading </a>
             </div>
             
 
@@ -111,19 +111,19 @@
             <ul class="nav-hamburger-list visibility-hidden">
                 
                 <li class="nav-item">
-                    <a href="http://localhost:1313/about/" > About </a>
+                    <a href="https://mateojuliani.github.io/about/" > About </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="http://localhost:1313/posts/" > Posts </a>
+                    <a href="https://mateojuliani.github.io/posts/" > Posts </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="http://localhost:1313/projects/" > Projects </a>
+                    <a href="https://mateojuliani.github.io/projects/" > Projects </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="http://localhost:1313/reading/" > Reading </a>
+                    <a href="https://mateojuliani.github.io/reading/" > Reading </a>
                 </li>
                 
                 <li class="nav-item dark-theme-toggle">
@@ -169,7 +169,7 @@
         <ul class="post-tags">
           
            
-             <li class="post-tag"><a href="http://localhost:1313/tags/sports-analytics">sports analytics</a></li>
+             <li class="post-tag"><a href="https://mateojuliani.github.io/tags/sports-modeling">sports modeling</a></li>
            
          
         </ul>
@@ -184,27 +184,27 @@
         <p>Ahead of the next international soccer break in early June 2025, I wanted to publish a quick overview of the methodology I use to create international soccer forecasts on <a href="/projects/xg_boosted/">this site</a>. If you have any thoughts on the below, I would love to hear from you at mateojuliani at gmail dot com!</p>
 <h1 id="section-1-intro-and-motivation">Section 1: Intro and Motivation</h1>
 <p>In November 2023, I came across these betting odds for the World Cup Qualifying match between Brazil and Argentina:</p>
-<p><img alt="bra arg odds" src="/posts/international_soccer_forecasts_3_13_25/images/arg_bra_odds.jpg"></p>
+<p><img alt="bra arg odds" src="/posts/international_soccer_forecasts_5_24_25/images/arg_bra_odds.jpg"></p>
 <p>If you are not familiar with decimals odds, the picture shows a sports book offering a 2.3x payout for every 1 dollar bet if Brazil beats Argentina. Similarly, it offered 3.0x for a draw, and 3.4x for an Argentine victory. Converting those odds to probability (in this case it is easy - we can do so by dividing 1 by the odds), we get the following:</p>
 <ul>
 <li>Implied chance of Brazil winning: 41.6%</li>
 <li>Implied chance of the game ending in a tie: 33.3%</li>
 <li>Implied chance of Argentina winning: 29.4%</li>
 </ul>
-<p>For a bit more background, at the time (November 2023), the Argentine nation team had continued its form from the World Cup, while the Brazilian national team was going through going through some of the worst (if not the worst) form I had ever seen them in.</p>
-<p>Therefore, seeing Brazil as the favorite seemed mispriced. The probable reason why Brazil was priced at 2.3x was that they were playing in Brazil. Previously, Brazil had never lost a World Cup Qualifying match at home. Past performance is not indicative of future performance (although obviously it can be a good indicator), and Argentina went to win the game following an Otamendi header.</p>
-<p>More importantly, the mispriced odds suggested that maybe these sports books weren&rsquo;t that great at pricing International Football matches, which motivates the main question - How could we build a simple model to estimate the win / draw / loss rates of International Football matches?</p>
-<p>The rest of this post will be as follows: Section 2 describes the general methodology behind the odds <a href="/projects/xg_boosted/">published on this website</a>, Section 3 analyzes how effective this methodology is vs. actual results, and Section 4 is a catch all section for my remaining thoughts.</p>
+<p>For a bit more background, at the time (November 2023), the Argentine nation team had continued its form from the World Cup, while the Brazilian national team was going through going through some of the worst - if not the worst - form I had ever seen them in.</p>
+<p>Therefore, seeing Brazil as the favorite seemed mispriced. The probable reason why Brazil was priced at 2.3x was their home advantage. Prior to this game, Brazil had never lost a World Cup Qualifying match at home. However, past performance is not indicative of future performance (although obviously it can be a good indicator), and Argentina went to win the game following an Otamendi header.</p>
+<p>More importantly, the mispriced odds suggested that maybe these sports books weren&rsquo;t that great at pricing international soccer matches relative to domestic soccer matches (although a larger sample is needed than just one match), which motivates the main question - How could we build a simple model to estimate the win / draw / loss rates of international soccer matches?</p>
+<p>The rest of this post is structured as follows: Section 2 describes the general methodology behind the odds <a href="/projects/xg_boosted/">published on this website</a>, Section 3 analyzes how effective this methodology is vs. actual results, and Section 4 is a catch all section for my remaining thoughts.</p>
 <h1 id="section-2-model-methodology">Section 2: Model Methodology</h1>
 <p>To start, we need a method to rank a team&rsquo;s overall form. A common methodology is using the <a href="https://en.wikipedia.org/wiki/Elo_rating_system">Elo system</a> to rate teams, although some adjustments are needed vs the base system. To keep things simple, we will use the Elo ratings from <a href="eloratings.net">eloratings.net</a>, which compiles and updates each international team&rsquo;s Elo ratings. You can read more about the methodology <a href="https://eloratings.net/about">here</a>, but some of the main deviations from the base Elo system are:</p>
 <ul>
 <li>Ties are worth half of a win</li>
-<li>The bigger the tournament (e.g. World Cup, Euros, etc), the higher K factor used</li>
-<li>The K factor is also modified for goal difference. The greater goal difference, the higher K value used.</li>
+<li>The bigger the tournament (e.g. World Cup, Euros, etc), the higher K factor used <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>.</li>
+<li>The K factor is also modified for goal difference. The greater goal difference, the higher K factor used.</li>
 </ul>
-<p>With the Elo Ratings, a simple feature we can create to predict win rates is the ELO difference between the two teams. I would highly recommend checking out <a href="https://www.youtube.com/watch?v=KjISuZ5o06Q&t=1s">this video</a> by Oxford Mathematics which details how to use Elo difference to construction a model using Elo difference. In this post, we will use a different methodology, but as shown in the graph below, there is a decent relationship (R^2 of ~.40) between ELO difference and score difference.</p>
-<p><img alt="elo diff score diff" src="/posts/international_soccer_forecasts_3_13_25/images/elo_diff_score_diff.png"></p>
-<p>The Elo Difference variable is enough to fit a multinomial logistic regression to forecast win, loss, draw percentages. However, we will add two more features - two dummy variables to indicate if team 1 is home (0 if no, and 1 if yes) and if team 2 is home.</p>
+<p>With the Elo ratings, a simple feature we can create to predict win rates is the ELO difference between the two teams. I would highly recommend checking out <a href="https://www.youtube.com/watch?v=KjISuZ5o06Q&t=1s">this video</a> by Oxford Mathematics which details how to use Elo difference to construction a model using Elo difference. In this post, we will use a different methodology, but as shown in the graph below, there is a decent positive relationship (R^2 of ~.41) between ELO difference and score difference.</p>
+<p><img alt="elo diff score diff" src="/posts/international_soccer_forecasts_5_24_25/images/elo_diff_score_diff.png"></p>
+<p>The Elo difference variable is enough to fit a multinomial logistic regression to forecast win, loss, draw percentages. However, we will add two more features - two dummy variables to indicate if team 1 is home (0 if no, and 1 if yes) and if team 2 is home.</p>
 <p>With these three variables, we can fit a multinomial logistic  regression using Sklearn. As mentioned, the features are</p>
 <ul>
 <li>elo_diff: The difference in Elo between Team 1 and 2</li>
@@ -217,7 +217,7 @@ y = df_train[&quot;game_results&quot;]
 model_ft = LogisticRegression(multi_class='multinomial', solver='lbfgs')
 model_ft.fit(X, y)
 </code></pre>
-<p>Note, when performing inference, we won&rsquo;t actually use the model&rsquo;s direct classification to determine who wil win or if the game will end in a draw. Instead, we are interested in the probability of each outcome. In other words, we will not use</p>
+<p>Note, when performing inference, we won&rsquo;t actually use the model&rsquo;s direct classification to determine who will win or lose. Instead, we are interested in the probability of each outcome. In other words, we will not use</p>
 <pre><code>model_ft.predict()
 </code></pre>
 <p>but instead use to get the probabilities of each of the forecasted classes:</p>
@@ -227,24 +227,24 @@ model_ft.fit(X, y)
 <p>And that is it! Pretty simple, but in the next section will see how well the model performs. If you want to take a closer look at the code, you can find it on my <a href="https://github.com/mateojuliani/xg_boosted_international_forecasts">github</a>.</p>
 <h1 id="section-3-results">Section 3: Results</h1>
 <p>Evaluating the results of soccer games is tricky. To start, we will input ELO differences of -1000 to 1000 into our model to get a sense if the model odds are realistic. We also assume that Team 1 is the home team:</p>
-<p><img alt="win percentages" src="/posts/international_soccer_forecasts_3_13_25/images/win_pct.png"></p>
-<p>At a high level, we can see as Elo difference increases, Team 1 has higher odds of winning, which is what we would expect. Interestingly, team 1 and team 2 have the same odds of winning when Team 1 has an ELO difference of -120 vs Team 2. In other words, the model implies that playing at home is equivalent to getting a 120 ELO boost. To check this, we can plot the same graph but set the home advantage to 0 for both teams.</p>
-<p><img alt="ex_home_adv" src="/posts/international_soccer_forecasts_3_13_25/images/odds_ex_home_adv.png"></p>
+<p><img alt="win percentages" src="/posts/international_soccer_forecasts_5_24_25/images/win_pct.png"></p>
+<p>At a high level, we can see as Elo difference increases, Team 1 has higher odds of winning, which is what we would expect. Interestingly, Team 1 and Team 2 have the same odds of winning when Team 1 has an ELO difference of -120 vs Team 2. In other words, the model implies that playing at home is equivalent to getting a 120 point ELO boost. To confirm this, we can plot the same graph but set the home advantage to 0 for both teams.</p>
+<p><img alt="ex_home_adv" src="/posts/international_soccer_forecasts_5_24_25/images/odds_ex_home_adv.png"></p>
 <p>As expected, now the teams have the same odds when they have an Elo difference of 0.</p>
 <p>But how does the model compare to actual results?</p>
 <p>Since we are interested in measuring how accurate our probabilistic predictions are, we can&rsquo;t use classic metrics such as F1 or Accuracy. Instead, we can create a calibration curve plot to measure how the model&rsquo;s average prediction stacked against the observed win and draw rates. For the below curve, we fit the model to first ~5800 games, and then test the model on the remaining 3000 games.</p>
-<p><img alt="calibration_curve" src="/posts/international_soccer_forecasts_3_13_25/images/calibration_curve_3.png"></p>
-<p>Generally, we can see the model&rsquo;s probabilities track the true outcome, although there is some bias for some of the bins. To quantify the accurate, we can calculate the model&rsquo;s Expected Calibration Error (ECE), a weighted sum of each&rsquo;s bin&rsquo;s mean error. If you&rsquo;re interested in learning more about the metric, I found this cool <a href="https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/">blog post</a> that goes into more details and has nice visualizations. Our model has the following ECE values:</p>
+<p><img alt="calibration_curve" src="/posts/international_soccer_forecasts_5_24_25/images/calibration_curve_3.png"></p>
+<p>Generally, we can see the model&rsquo;s probabilities track the true outcome, although there is some bias for some of the bins. To quantify the accuracy, we can calculate the model&rsquo;s Expected Calibration Error (ECE), a weighted sum of each&rsquo;s bin&rsquo;s mean error. If you&rsquo;re interested in learning more about the metric, I found this cool <a href="https://towardsdatascience.com/expected-calibration-error-ece-a-step-by-step-visual-explanation-with-python-code-c3e9aa12937d/">blog post</a> that goes into more details and has nice visualizations. Our model has the following ECE values:</p>
 <ul>
 <li>T1 Win: 2.9%</li>
 <li>Draw: 1.6%</li>
 <li>T2 Win: 3.3%</li>
 </ul>
-<p>Generally speaking, the model appears to be 3% off the observed results. However, to know how useful our model is, we should compare it to another international soccer model or betting odds. Unfortunately, I couldn&rsquo;t find good historical international odds data, however we can compare our forecasts to Nate Silver&rsquo;s late 538 forecasts. For reference, here is the <a href="https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/">archived version</a> of 538 methodology. The main metric we will use to evaluate the models&rsquo; efficacy is the famed <a href="https://library.virginia.edu/data/articles/a-brief-on-brier-scores">Brier score</a>, a metric to measure the performance of probabilistic forecasts.</p>
-<p>Over 1510 games from 2019-03-23 and 2023-06-12, the 538 forecasts achieved a brier score of 0.518 whereas the ELO model presented in this post achieved a brier score of 0.512, suggesting both methodologies are comparable in accuracy.</p>
+<p>Generally speaking, the model appears to be 3% off the observed results. However, to know how useful our model is, we should compare it to another international soccer model or betting odds. Unfortunately, I couldn&rsquo;t find good historical international odds data, however we can compare our forecasts to Nate Silver&rsquo;s prior 538 forecasts. For reference, here is the <a href="https://fivethirtyeight.com/methodology/how-our-club-soccer-predictions-work/">archived version</a> of 538 methodology. The main metric we will use to evaluate the models&rsquo; efficacy is the famed <a href="https://library.virginia.edu/data/articles/a-brief-on-brier-scores">Brier score</a>, a metric to measure the performance of probabilistic forecasts.</p>
+<p>Over 1510 games from 2019-03-23 and 2023-06-12, the 538 forecasts achieved a brier score of 0.518 whereas the ELO model presented in this post achieved a brier score of 0.512, suggesting both methodologies are comparable in accuracy. Not bad given the model&rsquo;s simplicity!</p>
 <h1 id="section-4-remaining-thoughts">Section 4: Remaining Thoughts</h1>
 <p>The first motivation of this post was to explain at a high level how I arrive at the international soccer forecasts <a href="/projects/xg_boosted/">published on this website</a>. The second motivator was to show case that a (relatively) simple model can perform decently well and compete with other popular models (such as 538&rsquo;s model).</p>
-<p>Of course, I would be surprised if this model in a vacuum performs well with sports books or other betting exchanges, however it is a good starting point to build off of and could be worth the time spent. My intuition is that international soccer matches are not priced as efficiently  as domestic games because of the smaller samples of games and higher variance (because of changing player form, team form, team availability, etc). Therefore, combining a simple (or more advanced) model with domain expertise could lead to more accurate betting odds.</p>
+<p>Of course, I would be surprised if this model in a vacuum performs well with sports books or other betting exchanges, however it is a good starting point to build a more sophisticated model. My intuition is that international soccer matches are not priced as efficiently as domestic games because of the smaller sample sizes and higher variance (because of changing player form, team form, team availability, etc). Therefore, combining a simple (or more advanced) model with domain expertise could lead to more accurate betting odds.</p>
 <p>As mentioned, this model is a starting point. Future directions to improve the model could (and probably should) include</p>
 <ol>
 <li>Incorporating line up information and adjusting ELO based on relative squad strength</li>
@@ -253,6 +253,14 @@ model_ft.fit(X, y)
 <li>Incorporating other useful features into the regression such underlying performance metrics (attack and defense ratings), travel distance, or <a href="https://en.wikipedia.org/wiki/Estadio_Hernando_Siles">altidude</a></li>
 </ol>
 <p>If you have any thoughts on the above, I would love to hear from you at mateojuliani at gmail dot com!</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>K factor is a parameter that determines how much the current game should influence a team&rsquo;s overall ELO rating. The higher the K factor, the more their ELO ratings will move following a game. Therefore, larger / more important games will influence a team&rsquo;s ELO rating more given the higher K factor used.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
 
         
     </div>
@@ -300,7 +308,7 @@ model_ft.fit(X, y)
     
 
     <span>
-        Web layout based on <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a> theme.
+        © 2025 Mateo Juliani. All rights reserved. Website modified from <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a> theme.
     </span>
 </footer>
 </body>

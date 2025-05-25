@@ -36,5 +36,12 @@
       <guid>https://mateojuliani.github.io/posts/how_to_read_paper/</guid>
       <description>&lt;p&gt;This semester at Columbia, I am taking two research focused classes on Causal Inference and AI Agents. Reading academic papers is a main component of both classes. While in the past I have read research papers, I did not have a set system to efficiently read, understand, and annotate the papers. The purpose of this post is to detail my current method for my own reference, to source feedback from others (see about page), and (maybe!) help others read papers more efficiently.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title></title>
+      <link>https://mateojuliani.github.io/posts/why_ai_needs_causality/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://mateojuliani.github.io/posts/why_ai_needs_causality/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

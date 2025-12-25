@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Mateo Juliani</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Dec 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://mateojuliani.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Short Thoughts on Various Probabilistic ML Papers</title>
+      <link>https://mateojuliani.github.io/posts/2025_12_14_6701_readings/</link>
+      <pubDate>Sun, 21 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>https://mateojuliani.github.io/posts/2025_12_14_6701_readings/</guid>
+      <description>&lt;p&gt;This semester for Columbia&amp;rsquo;s STCS6701: Probabilistic Models and Machine Learning taught by David Blei, I read a variety of papers on probabilistic machine learning. Below I include some short write ups on my thoughts for some of the papers, organized by topics.&lt;/p&gt;&#xA;&lt;h1 id=&#34;bayesian-inspired-regularizers-for-neural-nets&#34;&gt;Bayesian Inspired Regularizers for Neural Nets&lt;/h1&gt;&#xA;&lt;h2 id=&#34;curvature-driven-smoothing-a-learning-algorithm-for-feedforward-networkshttpsieeexploreieeeorgdocument248466-bayesian-back-propagation-section-5httpswwwsemanticscholarorgpaperbayesian-back-propagation-buntine-weigendc83684f6207697c12850db423fd9747572cf1784&#34;&gt;&lt;a href=&#34;https://ieeexplore.ieee.org/document/248466/&#34;&gt;Curvature-Driven Smoothing: A Learning Algorithm for Feedforward Networks&lt;/a&gt;, &lt;a href=&#34;https://www.semanticscholar.org/paper/Bayesian-Back-Propagation-Buntine-Weigend/c83684f6207697c12850db423fd9747572cf1784&#34;&gt;Bayesian Back-Propagation (Section 5)&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;These two papers explored different priors that could be used with Neural Nets. The first paper, focused on creating a functional smoothness prior based on the second derivative of a neural net with respect to the input. This prior is added to the traditional MSE loss function, thus the learning algorithm will penalize neural nets with large &amp;ldquo;curvatures&amp;rdquo; or changes in magnitudes, thus potentially learning a smoother function. The second paper focuses on smoothing priors and entropic priors (priors that nudge the model away from being very confident in a single estimate).&lt;/p&gt;</description>
+    </item>
     <item>
       <title>A Simple - and Somewhat Effective - Soccer Model</title>
       <link>https://mateojuliani.github.io/posts/international_soccer_forecasts_5_24_25/</link>
@@ -35,13 +42,6 @@
       <pubDate>Thu, 23 Jan 2025 00:00:00 +0000</pubDate>
       <guid>https://mateojuliani.github.io/posts/how_to_read_paper/</guid>
       <description>&lt;p&gt;This semester at Columbia, I am taking two research focused classes on Causal Inference and AI Agents. Reading academic papers is a main component of both classes. While in the past I have read research papers, I did not have a set system to efficiently read, understand, and annotate the papers. The purpose of this post is to detail my current method for my own reference, to source feedback from others (see about page), and (maybe!) help others read papers more efficiently.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title></title>
-      <link>https://mateojuliani.github.io/posts/why_ai_needs_causality/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://mateojuliani.github.io/posts/why_ai_needs_causality/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        :root {
+            --accent-color: #FF4D4D;
+            --font-size: 17.5px;
+        }
+    </style>
+
+    
+    
+    
+    
+    
+    
+
+    
+    <title>But Where Does L2 Regularization Come From?</title>
+    <meta name="description" content=" I learned about L2 / L1 regularization early on in my machine learning career as one those empirical &ldquo;tricks&rdquo; one could use to prevent overfitting. …">
+    <meta name="keywords" content='blog, ML Theory'>
+
+    <meta property="og:url" content="http://localhost:1313/posts/2025_12_25_6701_priors/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="But Where Does L2 Regularization Come From?">
+    <meta property="og:description" content=" I learned about L2 / L1 regularization early on in my machine learning career as one those empirical &ldquo;tricks&rdquo; one could use to prevent overfitting. …">
+    <meta property="og:image" content="http://localhost:1313/images/image.png">
+    <meta property="og:image:secure_url" content="http://localhost:1313/images/image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="But Where Does L2 Regularization Come From?">
+    <meta name="twitter:description" content=" I learned about L2 / L1 regularization early on in my machine learning career as one those empirical &ldquo;tricks&rdquo; one could use to prevent overfitting. …">
+    <meta property="twitter:domain" content="http://localhost:1313/posts/2025_12_25_6701_priors/">
+    <meta property="twitter:url" content="http://localhost:1313/posts/2025_12_25_6701_priors/">
+    <meta name="twitter:image" content="http://localhost:1313/images/image.png">
+
+    
+    <link rel="canonical" href="http://localhost:1313/posts/2025_12_25_6701_priors/">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/normalize.min.css" media="print">
+
+    
+    <link rel="stylesheet" type="text/css" href="/css/main.min.css">
+
+    
+    <link id="dark-theme" rel="stylesheet" href="/css/dark.min.css">
+
+    
+    <script src="/js/bundle.min.3eb19cb61dde9e37b9522867f3e024aeb68e26ab8e03252e46e365abcb19acf7.js" integrity="sha256-PrGcth3enje5Uihn8&#43;AkrraOJquOAyUuRuNlq8sZrPc="></script>
+
+    
+    
+</head>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body, {
+    delimiters: [
+      {left: '$$', right: '$$', display: true},
+      {left: '$', right: '$', display: false}
+    ]
+  });">
+</script>
+
+
+    <body>
+        <script>
+            
+            setThemeByUserPref();
+        </script><header class="header">
+    <nav class="header-nav">
+
+        
+        <div class="avatar">
+            <a href="http://localhost:1313/">
+                <img src='/images/image.png' alt="avatar">
+            </a>
+        </div>
+        
+
+        <div class="nav-title">
+            <a class="nav-brand" href="http://localhost:1313/">Mateo Juliani</a>
+        </div>
+
+        <div class="nav-links">
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/about/" aria-label="about" > About </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/posts/" aria-label="posts" > Posts </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/projects/" aria-label="projects" > Pubs &amp; Projects </a>
+            </div>
+            
+            <div class="nav-link">
+                <a href="http://localhost:1313/reading/" aria-label="Reading" > Reading </a>
+            </div>
+            
+
+            <span class="nav-icons-divider"></span>
+            <div class="nav-link dark-theme-toggle">
+                <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                <a aria-hidden="true" role="switch">
+                    <span class="theme-toggle-icon" data-feather="moon"></span>
+                </a>
+            </div>
+
+            <div class="nav-link" id="hamburger-menu-toggle">
+                <span class="sr-only hamburger-menu-toggle-screen-reader-target">menu</span>
+                <a aria-checked="false" aria-labelledby="hamburger-menu-toggle" id="hamburger-menu-toggle-target" role="switch">
+                    <span data-feather="menu"></span>
+                </a>
+            </div>
+
+            
+            <ul class="nav-hamburger-list visibility-hidden">
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/about/" > About </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/posts/" > Posts </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/projects/" > Pubs &amp; Projects </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a href="http://localhost:1313/reading/" > Reading </a>
+                </li>
+                
+                <li class="nav-item dark-theme-toggle">
+                    <span class="sr-only dark-theme-toggle-screen-reader-target">theme</span>
+                    <a role="switch">
+                        <span class="theme-toggle-icon" data-feather="moon"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+</header>
+<main id="content">
+    <div class="post container">
+    <div class="post-header-section">
+        <h1>But Where Does L2 Regularization Come From?</h1>
+
+        
+
+        
+	
+	
+	
+	
+        
+    
+
+	
+
+	
+
+	
+          <small role="doc-subtitle"></small>
+	
+
+	
+          <p class="post-date">December 27, 2025
+           
+          </p>
+	
+
+        <ul class="post-tags">
+          
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/blog">blog</a></li>
+           
+         
+           
+             <li class="post-tag"><a href="http://localhost:1313/tags/ml-theory">ML Theory</a></li>
+           
+         
+        </ul>
+    </div>
+
+    
+     
+
+    
+
+    <div class="post-content">
+        <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<p>I learned about L2 / L1 regularization early on in my machine learning career as one those empirical &ldquo;tricks&rdquo; one could use to prevent overfitting. The logic went as followed - by adding the sum of the squared (or absolute) value of the weights, you could prevent the model from learning large values for weights, which would prevent the network from learning weights that could perfectly model (overfit to) the data. Indeed, several blogs (such as <a href="https://developers.google.com/machine-learning/crash-course/overfitting/regularization">this one</a> by Google) provide a similar argument to the one above.</p>
+<p>However, a lot of these blogs don&rsquo;t mention <em>why</em> L2 regularization is the sum of weights squared, and not some other arbitrary function. The goal of this blog post is to discuss one derivation and interpretation of L2 / L1 regularization, and set the foundation from my next blog post on advanced regularization techniques (coming soon! - although see my <a href="/projects/pdf/6701_l1_l2.pdf">research project</a> here for a detailed look).</p>
+<h1 id="what-is-l2-regularization-doing-to-the-weights">What is L2 regularization doing to the weights?</h1>
+<p>Although not explicitly mentioned, the <a href="https://developers.google.com/machine-learning/crash-course/overfitting/regularization">Google</a> post about regularization provides some hints at what L2 regularization is doing.</p>
+<p>First, here is a chart from the blog post which shows the distribution of a model&rsquo;s weight when using &ldquo;low regularization&rdquo;:</p>
+<p><img alt="low_reg" src="/posts/2025_12_25_6701_priors/images/low_reg.png"></p>
+<p>There seem to be some weights with higher values, some with lower values, but they all have some density. In contrast, here is the distribution of a model&rsquo;s weight when using &ldquo;high regularization&rdquo; (i.e. L2 regularization):</p>
+<p><img alt="high_reg" src="/posts/2025_12_25_6701_priors/images/high_reg.png"></p>
+<p>Woah! The distribution now resembles a normal distribution with mean zero. And there lies one interpretation o f L2 regularzation - L2 regularzation assume the values of each weight is sampled from a normal distribution with mean 0 and a fixed variance, $w_i \sim N(0, \sigma^2)$. Therefore, most of weight values will be close to zero, given the probability of observing a large weight is low, but some higher valued weights will occur.</p>
+<p>That&rsquo;s pretty cool, but it still raises the question of where we get the $\sum_{i=1}^{n} w_i^2$</p>
+<h1 id="formal-l2-derivation">Formal L2 Derivation</h1>
+<h2 id="bayesian-model-inference">Bayesian Model Inference</h2>
+<p>To understand how we get the L2 derivation, we need to make a quick detour into Bayesian statistics. The core idea of Bayesian statistics is that you have a prior belief about something, you see some data (or evidence), and then you create a posterior belief based on the prior + the new data. We can apply the same concept to model inference. Suppose I have a dataset $D = {(x_i, y_i)}_1^n$ and I want to estimate a model&rsquo;s parameters $\theta$. Under the Bayesian framework, I can estimate $p(\theta | D) \propto p(Y | \theta, X) p(\theta)$ using bayes rules. In other words, my posterior model parameters are a function of the likelihood of me observing the data with parameters $\theta$ and data D ( the $p(Y | \theta, X)$) component time my prior belief on $\theta$ - $p(\theta)$.</p>
+<h2 id="bayesian-regression-derivation">Bayesian Regression Derivation</h2>
+<p>Okay, now lets see how one would actually implement this theory into practice.</p>
+<h1 id="concluding-remarks">Concluding Remarks</h1>
+<p>But it raises the question, is assuming our weights are sampled from a normal distribution with mean 0 appropriate for a neural net, or are there other priors (regularizors) that could lead to increased performance? This is the question I asked in this <a href="/projects/pdf/6701_l1_l2.pdf">project</a>, and a topic I will explore in a future blog post (stay tuned!)</p>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+
+        
+    </div>
+
+    <div class="prev-next">
+        
+            
+                
+<div class="prev-post">
+    <p>
+        <a href="/posts/2025_12_14_6701_readings/">
+            &#8592;
+            Previous:
+            Short Thoughts on Various Probabilistic ML Papers
+        </a>
+    </p>
+    
+    
+</div>
+
+
+
+
+            
+        
+    </div>
+
+    
+    
+    
+</div>
+
+
+
+    
+
+        </main><footer class="footer">
+    
+    
+
+    
+
+    
+
+    
+
+    <span>
+        © 2025 Mateo Juliani. All rights reserved. Website modified from <a target="_blank" href="https://github.com/gokarna-theme/gokarna-hugo">Gokarna</a> theme.
+    </span>
+</footer>
+</body>
+</html>

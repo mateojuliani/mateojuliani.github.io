@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ML Theory on Mateo Juliani</title>
+    <link>http://localhost:1313/tags/ml-theory/</link>
+    <description>Recent content in ML Theory on Mateo Juliani</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 27 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ml-theory/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>But Where Does L2 Regularization Come From?</title>
+      <link>http://localhost:1313/posts/2025_12_25_6701_priors/</link>
+      <pubDate>Sat, 27 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2025_12_25_6701_priors/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;!-- raw HTML omitted --&gt;&#xA;&lt;p&gt;I learned about L2 / L1 regularization early on in my machine learning career as one those empirical &amp;ldquo;tricks&amp;rdquo; one could use to prevent overfitting. The logic went as followed - by adding the sum of the squared (or absolute) value of the weights, you could prevent the model from learning large values for weights, which would prevent the network from learning weights that could perfectly model (overfit to) the data. Indeed, several blogs (such as &lt;a href=&#34;https://developers.google.com/machine-learning/crash-course/overfitting/regularization&#34;&gt;this one&lt;/a&gt; by Google) provide a similar argument to the one above.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
